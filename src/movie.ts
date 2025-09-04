@@ -1,11 +1,11 @@
-import ForWatching from "./ForWatching";
+import MovieInterface from "./MovieInterface";
 
-export default class Movie implements ForWatching {
-    constructor (
-        readonly name: string,
-        readonly country: string,
-        readonly slogan?: string,
-        readonly genre: string,
-        readonly duration: string
-    ) {}
+export default class Movie implements MovieInterface {
+  constructor(
+    readonly name: string,
+    readonly country: string,
+    readonly genre: string,
+    readonly duration: string,
+    readonly slogan?: string
+  ) {}
 }

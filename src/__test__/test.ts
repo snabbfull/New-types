@@ -1,42 +1,47 @@
-import ForWatching from "../ForWatching";
 import Movie from "../movie";
 import Cart from "../cart";
 
-test('Добавление фильма в корзину', () => {
-    const myMovie = new Movie("Интерстеллар", "США", "Только вперед", "Фантастика", "180 мин.")
+test("Добавление фильма в корзину", () => {
+  const myMovie = new Movie(
+    "Интерстеллар",
+    "США",
+    "Фантастика",
+    "180 мин.",
+    "Только вперед"
+  );
 
-    const myCart = new Cart();
+  const myCart = new Cart();
 
-    myCart.add(myMovie);
+  myCart.add(myMovie);
 
-    const result = [
-      {
-        name: "Интерстеллар",
-        country: "США",
-        slogan: "Только вперед",
-        genre: "Фантастика",
-        duration: "180 мин."
-      },
-    ];
+  const result = [
+    {
+      name: "Интерстеллар",
+      country: "США",
+      genre: "Фантастика",
+      duration: "180 мин.",
+      slogan: "Только вперед"
+    },
+  ];
 
-    expect(result).toEqual(myCart.items);
+  expect(result).toEqual(myCart.items);
 });
 
 test("Создание класса Movie", () => {
-    const myMovie = new Movie(
-      "Интерстеллар",
-      "США",
-      "Только вперед",
-      "Фантастика",
-      "180 мин."
-    );
-    const result = {
-        name: "Интерстеллар",
-        country: "США",
-        slogan: "Только вперед",
-        genre: "Фантастика",
-        duration: "180 мин."
-      };
+  const myMovie = new Movie(
+    "Интерстеллар",
+    "США",
+    "Фантастика",
+    "180 мин.",
+    "Только вперед"
+  );
+  const result = {
+    name: "Интерстеллар",
+    country: "США",
+    genre: "Фантастика",
+    duration: "180 мин.",
+    slogan: "Только вперед"
+  };
 
-      expect(result).toEqual(myMovie);
-})
+  expect(result).toEqual(myMovie);
+});

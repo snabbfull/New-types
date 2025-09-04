@@ -1,13 +1,13 @@
-import ForWatching from "./ForWatching";
+import MovieInterface from "./MovieInterface";
 
 export default class Cart {
-    private _items: ForWatching[] = [];
+  private _items: MovieInterface[] = [];
 
-    add(item: ForWatching): void {
-        this._items.push(item);
-    }
+  add(item: MovieInterface): void {
+    this._items.push(item);
+  }
 
-    get items(): ForWatching[] {
-        return [...this._items];
-    }
+  get items(): MovieInterface[] {
+    return [...this._items];
+  }
 }
